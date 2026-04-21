@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Full Solid Crowns | Zircnova</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --blue: #5795d2;
+      --blue-dark: #3a6fad;
+      --blue-hover: #062fb2;
+      --text: #222222;
+      --text-body: #000000;
+      --border: #ededed;
+      --bg2: #f6f6f6;
+      --gold: #c8a84b;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Barlow', system-ui, -apple-system, sans-serif;
+      font-size: 15px;
+      color: var(--text-body);
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Announcement Bar ── */
+    .announce-bar {
+      background: var(--blue);
+      color: #fff;
+      text-align: center;
+      padding: 9px 16px;
+      font-size: 13px;
+      letter-spacing: .03em;
+    }
+    .announce-bar a { color: #fff; text-decoration: underline; font-weight: 600; }
+
+    /* ── Header ── */
+    header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+    }
+    .header-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      height: 88px;
+    }
+    .logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 26px;
+      letter-spacing: -0.5px;
+      color: #1a1a1a;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      white-space: nowrap;
+    }
+    .logo-dot {
+      width: 10px; height: 10px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+    .search-wrap {
+      flex: 1;
+      display: flex;
+      border: 1.5px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+      height: 44px;
+    }
+    .search-wrap input {
+      flex: 1;
+      border: none;
+      outline: none;
+      padding: 0 16px;
+      font-size: 14px;
+      font-family: 'Barlow', sans-serif;
+      color: var(--text);
+    }
+    .search-wrap button {
+      background: var(--blue);
+      border: none;
+      color: #fff;
+      padding: 0 18px;
+      cursor: pointer;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      transition: background .2s;
+    }
+    .search-wrap button:hover { background: var(--blue-hover); }
+    .header-icons {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .icon-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      cursor: pointer;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 11px;
+      letter-spacing: .04em;
+      font-weight: 500;
+      transition: color .2s;
+    }
+    .icon-btn:hover { color: var(--blue); }
+    .icon-btn svg { width: 22px; height: 22px; }
+    .cart-icon { position: relative; }
+    .cart-badge {
+      position: absolute;
+      top: -6px; right: -8px;
+      background: #DA3F3F;
+      color: #fff;
+      border-radius: 50%;
+      width: 18px; height: 18px;
+      font-size: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+
+    /* ── Nav ── */
+    nav {
+      background: #fff;
+      border-bottom: 2px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      padding: 0 24px;
+      gap: 0;
+      height: 44px;
+    }
+    .nav-item {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--text);
+      text-decoration: none;
+      padding: 0 14px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -2px;
+      transition: color .15s, border-color .15s;
+      white-space: nowrap;
+    }
+    .nav-item:hover, .nav-item.active {
+      color: var(--blue);
+      border-bottom-color: var(--blue);
+    }
+    .nav-cta {
+      margin-left: auto;
+      background: var(--blue);
+      color: #fff !important;
+      border-radius: 2px;
+      padding: 0 18px !important;
+      border-bottom: none !important;
+      font-weight: 700;
+      transition: background .2s !important;
+    }
+    .nav-cta:hover { background: var(--blue-hover) !important; color: #fff !important; }
+
+    /* ── Breadcrumb ── */
+    .breadcrumb {
+      background: var(--bg2);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 24px;
+    }
+    .breadcrumb-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: #999;
+    }
+    .breadcrumb-inner a {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .breadcrumb-inner a:hover { text-decoration: underline; }
+    .breadcrumb-sep { color: #ccc; }
+
+    /* ── Page Layout ── */
+    .page-wrap {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 24px;
+      display: flex;
+      gap: 28px;
+      align-items: flex-start;
+    }
+
+    /* ── Sidebar ── */
+    .sidebar {
+      width: 210px;
+      flex-shrink: 0;
+    }
+    .sidebar-section {
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .sidebar-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--blue);
+      padding: 9px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+    .sidebar-title svg {
+      width: 14px; height: 14px;
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .sidebar-body {
+      padding: 10px 12px;
+      background: #fff;
+    }
+    .filter-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 0;
+      cursor: pointer;
+      font-size: 13px;
+      color: var(--text);
+      transition: color .15s;
+    }
+    .filter-item:hover { color: var(--blue); }
+    .filter-item input[type="checkbox"] {
+      accent-color: var(--blue);
+      width: 14px; height: 14px;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .filter-count {
+      margin-left: auto;
+      font-size: 11px;
+      color: #bbb;
+      font-weight: 500;
+    }
+    .filter-brand-logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 12px;
+      color: #1a1a1a;
+    }
+    .sidebar-cta {
+      display: block;
+      background: var(--blue);
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-bottom: 12px;
+      transition: background .2s;
+    }
+    .sidebar-cta:hover { background: var(--blue-hover); }
+    .sidebar-badge {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .badge-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--blue);
+      line-height: 1;
+    }
+    .badge-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: #999;
+    }
+    .badge-stars {
+      color: #f5a623;
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+
+    /* ── Main Content ── */
+    .main-content { flex: 1; min-width: 0; }
+
+    .page-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+    }
+    .page-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -.5px;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+    .page-count {
+      font-size: 13px;
+      color: #999;
+      margin-top: 4px;
+    }
+    .sort-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .sort-label {
+      font-size: 13px;
+      color: #666;
+      white-space: nowrap;
+    }
+    .sort-select {
+      border: 1.5px solid var(--border);
+      border-radius: 4px;
+      padding: 7px 12px;
+      font-size: 13px;
+      font-family: 'Barlow', sans-serif;
+      color: var(--text);
+      background: #fff;
+      cursor: pointer;
+      outline: none;
+    }
+    .view-btns {
+      display: flex;
+      gap: 4px;
+    }
+    .view-btn {
+      width: 32px; height: 32px;
+      border: 1.5px solid var(--border);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: #aaa;
+      background: #fff;
+      transition: border-color .2s, color .2s;
+    }
+    .view-btn.active, .view-btn:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+    .view-btn svg { width: 14px; height: 14px; }
+
+    /* ── Featured Banner ── */
+    .featured-banner {
+      background: linear-gradient(135deg, #0d2d5e 0%, #1a4580 60%, #2a5fa8 100%);
+      border-radius: 6px;
+      padding: 20px 28px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      overflow: hidden;
+      position: relative;
+    }
+    .featured-banner::before {
+      content: '';
+      position: absolute;
+      right: -40px; top: -40px;
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.06);
+    }
+    .banner-text { position: relative; z-index: 1; }
+    .banner-eyebrow {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.6);
+      margin-bottom: 4px;
+    }
+    .banner-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 36px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      text-transform: uppercase;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .banner-title span { color: var(--gold); }
+    .banner-sub {
+      font-size: 13px;
+      color: rgba(255,255,255,.75);
+      max-width: 380px;
+      line-height: 1.5;
+    }
+    .banner-cta {
+      position: relative; z-index: 1;
+      display: inline-block;
+      background: var(--gold);
+      color: #1a1a1a;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: 12px 28px;
+      text-decoration: none;
+      border-radius: 2px;
+      white-space: nowrap;
+      transition: opacity .2s;
+    }
+    .banner-cta:hover { opacity: .85; }
+    .banner-img {
+      position: absolute;
+      right: 160px; top: -10px;
+      width: 120px;
+      opacity: .18;
+      filter: brightness(10);
+      pointer-events: none;
+    }
+
+    /* ── Product Grid ── */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+    .product-card {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      background: #fff;
+      cursor: pointer;
+      transition: box-shadow .2s, transform .15s;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+    .product-card:hover {
+      box-shadow: 0 6px 24px rgba(87,149,210,.18);
+      transform: translateY(-2px);
+    }
+    .product-badge {
+      position: absolute;
+      top: 8px; left: 8px;
+      background: #DA3F3F;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      font-family: 'Barlow Condensed', sans-serif;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      padding: 2px 7px;
+      border-radius: 2px;
+      z-index: 2;
+    }
+    .product-badge.new { background: var(--blue); }
+    .product-badge.best { background: var(--gold); color: #1a1a1a; }
+    .product-img-wrap {
+      background: var(--bg2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 12px;
+      height: 150px;
+    }
+    .product-img-wrap img {
+      max-width: 100%;
+      max-height: 118px;
+      object-fit: contain;
+    }
+    .product-info {
+      padding: 12px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .product-brand-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+    .product-brand {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+    .product-type-tag {
+      font-size: 10px;
+      font-weight: 600;
+      color: #fff;
+      background: var(--text);
+      padding: 2px 6px;
+      border-radius: 2px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .product-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.4;
+      margin-bottom: 6px;
+      flex: 1;
+    }
+    .product-stars {
+      color: #f5a623;
+      font-size: 12px;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+    .product-stars .review-num {
+      color: #aaa;
+      font-size: 11px;
+      margin-left: 2px;
+    }
+    .product-price-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 8px;
+    }
+    .product-price {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .product-price .old {
+      font-size: 13px;
+      font-weight: 400;
+      color: #bbb;
+      text-decoration: line-through;
+      margin-left: 4px;
+    }
+    .btn-cart {
+      background: var(--blue);
+      color: #fff;
+      border: none;
+      padding: 7px 12px;
+      border-radius: 3px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background .2s;
+      white-space: nowrap;
+    }
+    .btn-cart:hover { background: var(--blue-hover); }
+
+    /* ── Pagination ── */
+    .pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 20px 0 8px;
+    }
+    .page-btn {
+      width: 36px; height: 36px;
+      border: 1.5px solid var(--border);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      text-decoration: none;
+      transition: border-color .2s, color .2s, background .2s;
+    }
+    .page-btn:hover { border-color: var(--blue); color: var(--blue); }
+    .page-btn.active { background: var(--blue); border-color: var(--blue); color: #fff; }
+
+    /* ── Footer ── */
+    footer {
+      background: #1a1a1a;
+      color: rgba(255,255,255,.7);
+      padding: 48px 24px 24px;
+      margin-top: 40px;
+    }
+    .footer-inner { max-width: 1240px; margin: 0 auto; }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer-logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 24px;
+      color: #fff;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+    .footer-tagline {
+      font-size: 13px;
+      line-height: 1.7;
+      color: rgba(255,255,255,.5);
+      margin-bottom: 20px;
+      max-width: 260px;
+    }
+    .footer-socials { display: flex; gap: 10px; }
+    .social-btn {
+      width: 34px; height: 34px;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,.6);
+      cursor: pointer;
+      transition: background .2s, color .2s;
+      font-size: 13px;
+      text-decoration: none;
+    }
+    .social-btn:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .footer-col-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 8px; }
+    .footer-links a {
+      font-size: 13px;
+      color: rgba(255,255,255,.55);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .footer-links a:hover { color: #fff; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.1);
+      padding-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      color: rgba(255,255,255,.35);
+    }
+    .footer-bottom a { color: rgba(255,255,255,.35); text-decoration: none; }
+    .footer-bottom a:hover { color: rgba(255,255,255,.6); }
+  </style>
+</head>
+<body>
+
+<!-- Announcement Bar -->
+<div class="announce-bar">
+  🎉 Get 20% Off with Offer Code: <strong>DISC20</strong> &nbsp;|&nbsp; Free Shipping on orders over $150 &nbsp;|&nbsp; <a href="#">Shop the Disc Day Sale →</a>
+</div>
+
+<!-- Header -->
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <span>Zircnova</span><span class="logo-dot"></span>
+    </a>
+    <div class="search-wrap">
+      <input type="text" placeholder="Search for products, brands, categories..." />
+      <button>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+    </div>
+    <div class="header-icons">
+      <a href="#" class="icon-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span>Account</span>
+      </a>
+      <a href="#" class="icon-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg>
+        <span>Orders</span>
+      </a>
+      <a href="#" class="icon-btn cart-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-badge">3</span>
+        <span>Cart</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- Navigation -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-item">Home</a>
+    <a href="#" class="nav-item">Store</a>
+    <a href="products.html" class="nav-item active">Products</a>
+    <a href="#" class="nav-item">Brands</a>
+    <a href="#" class="nav-item">Gel</a>
+    <a href="#" class="nav-item">Acrylic</a>
+    <a href="#" class="nav-item">Tools</a>
+    <a href="#" class="nav-item">Accessories</a>
+    <a href="#" class="nav-item">Sale</a>
+    <a href="#" class="nav-item">New Arrivals</a>
+    <a href="#" class="nav-cta nav-item">Wholesale Login</a>
+  </div>
+</nav>
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="index.html">Home</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href="products.html">Products</a>
+    <span class="breadcrumb-sep">›</span>
+    <span>Full Solid Crowns</span>
+  </div>
+</div>
+
+<!-- Page Body -->
+<div class="page-wrap">
+
+  <!-- ── Sidebar ── -->
+  <aside class="sidebar">
+
+    <a href="products.html" class="sidebar-cta">← Back to All Products</a>
+
+    <!-- Rating Badge -->
+    <div class="sidebar-badge">
+      <div class="badge-stars">★★★★★</div>
+      <div class="badge-num">875</div>
+      <div class="badge-label">Verified Reviews</div>
+    </div>
+
+    <!-- Brand Filter -->
+    <div class="sidebar-section">
+      <div class="sidebar-title">
+        Shop by Brand
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="sidebar-body">
+        <label class="filter-item">
+          <input type="checkbox" checked />
+          <span class="filter-brand-logo">Zircnova●</span>
+          <span class="filter-count">48</span>
+        </label>
+        <label class="filter-item">
+          <input type="checkbox" />
+          Zircnova+PRO
+          <span class="filter-count">24</span>
+        </label>
+        <label class="filter-item">
+          <input type="checkbox" />
+          Zircnova+RE
+          <span class="filter-count">18</span>
+        </label>
+        <label class="filter-item">
+          <input type="checkbox" />
+          Zircnova+ME
+          <span class="filter-count">12</span>
+        </label>
+        <label class="filter-item">
+          <input type="checkbox" />
+          Zircnova+LED
+          <span class="filter-count">9</span>
+        </label>
+        <label class="filter-item">
+          <input type="checkbox" />
+          Zircnova+FX
+          <span class="filter-count">6</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Type Filter -->
+    <div class="sidebar-section">
+      <div class="sidebar-title">
+        Shop by Type
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="sidebar-body">
+        <label class="filter-item">
+          <input type="checkbox" checked />
+          Full Solid
+          <span class="filter-count">38</span>
+        </label>
+        <label class="filter-item">
+          <input type="checkbox" />
+          Multi-Layer
+          <span class="filter-count">22</span>
+        </label>
+        <label class="filter-item">
+          <input type="checkbox" />
+          Anterior
+          <span class="filter-count">16</span>
+        </label>
+        <label class="filter-item">
+          <input type="checkbox" />
+          Posterior
+          <span class="filter-count">14</span>
+        </label>
+        <label class="filter-item">
+          <input type="checkbox" />
+          Composite
+          <span class="filter-count">11</span>
+        </label>
+        <label class="filter-item">
+          <input type="checkbox" />
+          Temporary
+          <span class="filter-count">8</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Shade Filter -->
+    <div class="sidebar-section">
+      <div class="sidebar-title">
+        Shop by Shade
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="sidebar-body">
+        <label class="filter-item">
+          <input type="checkbox" />
+          A1 / Bright White
+          <span class="filter-count">20</span>
+        </label>
+        <label class="filter-item">
+          <input type="checkbox" />
+          A2 / Natural
+          <span class="filter-count">34</span>
+        </label>
+        <label class="filter-item">
+          <input type="checkbox" />
+          A3 / Medium
+          <span class="filter-count">28</span>
+        </label>
+        <label class="filter-item">
+          <input type="checkbox" />
+          B1 / Light
+          <span class="filter-count">15</span>
+        </label>
+        <label class="filter-item">
+          <input type="checkbox" />
+          OM1 / Bleached
+          <span class="filter-count">10</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Price Filter -->
+    <div class="sidebar-section">
+      <div class="sidebar-title">
+        Price Range
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="sidebar-body">
+        <label class="filter-item"><input type="checkbox" /> Under $10 <span class="filter-count">12</span></label>
+        <label class="filter-item"><input type="checkbox" checked /> $10 – $20 <span class="filter-count">31</span></label>
+        <label class="filter-item"><input type="checkbox" /> $20 – $35 <span class="filter-count">18</span></label>
+        <label class="filter-item"><input type="checkbox" /> Over $35 <span class="filter-count">6</span></label>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- ── Main Content ── -->
+  <main class="main-content">
+
+    <!-- Page Header -->
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Full Solid Crowns</h1>
+        <p class="page-count">117 products</p>
+      </div>
+      <div class="sort-controls">
+        <span class="sort-label">Sort by:</span>
+        <select class="sort-select">
+          <option>Best Recommended</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+          <option>Newest First</option>
+          <option>Top Rated</option>
+        </select>
+        <div class="view-btns">
+          <button class="view-btn active" title="Grid view">
+            <svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          </button>
+          <button class="view-btn" title="List view">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured Banner -->
+    <div class="featured-banner">
+      <div class="banner-text">
+        <p class="banner-eyebrow">Now Available</p>
+        <h2 class="banner-title">MULTI-LAYER <span>2.0</span></h2>
+        <p class="banner-sub">Our most advanced zirconia crown yet — enhanced translucency gradient with superior strength. Lab-certified strength of 1,200 MPa.</p>
+      </div>
+      <a href="#" class="banner-cta">Shop Multi-Layer 2.0</a>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="product-grid">
+
+      <!-- Card 1 -->
+      <div class="product-card">
+        <span class="product-badge best">Best Seller</span>
+        <div class="product-img-wrap">
+          <img src="images/crown-trans.png" alt="Zircnova Full Solid Crown" />
+        </div>
+        <div class="product-info">
+          <div class="product-brand-row">
+            <span class="product-brand">Zircnova●</span>
+            <span class="product-type-tag">Full Solid</span>
+          </div>
+          <p class="product-name">Full Solid Zirconia Crown — A2 Shade</p>
+          <div class="product-stars">★★★★★ <span class="review-num">(214)</span></div>
+          <div class="product-price-row">
+            <div class="product-price">$12.99</div>
+            <button class="btn-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="product-card">
+        <span class="product-badge new">New</span>
+        <div class="product-img-wrap">
+          <img src="images/crown-trans.png" alt="Zircnova Multi-Layer Crown" />
+        </div>
+        <div class="product-info">
+          <div class="product-brand-row">
+            <span class="product-brand">Zircnova+PRO</span>
+            <span class="product-type-tag">Multi-Layer</span>
+          </div>
+          <p class="product-name">Multi-Layer 2.0 Premium Crown — A1</p>
+          <div class="product-stars">★★★★★ <span class="review-num">(89)</span></div>
+          <div class="product-price-row">
+            <div class="product-price">$18.99</div>
+            <button class="btn-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="images/crown-trans.png" alt="Zircnova Anterior Crown" />
+        </div>
+        <div class="product-info">
+          <div class="product-brand-row">
+            <span class="product-brand">Zircnova+RE</span>
+            <span class="product-type-tag">Anterior</span>
+          </div>
+          <p class="product-name">High-Translucency Anterior Crown — B1</p>
+          <div class="product-stars">★★★★☆ <span class="review-num">(67)</span></div>
+          <div class="product-price-row">
+            <div class="product-price">$14.50</div>
+            <button class="btn-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="product-card">
+        <span class="product-badge" style="background:#DA3F3F;">Sale</span>
+        <div class="product-img-wrap">
+          <img src="images/crown-trans.png" alt="Zircnova Posterior Crown" />
+        </div>
+        <div class="product-info">
+          <div class="product-brand-row">
+            <span class="product-brand">Zircnova●</span>
+            <span class="product-type-tag">Posterior</span>
+          </div>
+          <p class="product-name">Posterior Full Solid Crown — A3 Shade</p>
+          <div class="product-stars">★★★★★ <span class="review-num">(143)</span></div>
+          <div class="product-price-row">
+            <div class="product-price">$10.99 <span class="old">$15.99</span></div>
+            <button class="btn-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="images/crown-trans.png" alt="Zircnova Ultra Crown" />
+        </div>
+        <div class="product-info">
+          <div class="product-brand-row">
+            <span class="product-brand">Zircnova+PRO</span>
+            <span class="product-type-tag">Full Solid</span>
+          </div>
+          <p class="product-name">Ultra Strength Zirconia Crown — A2</p>
+          <div class="product-stars">★★★★★ <span class="review-num">(198)</span></div>
+          <div class="product-price-row">
+            <div class="product-price">$16.50</div>
+            <button class="btn-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="product-card">
+        <span class="product-badge new">New</span>
+        <div class="product-img-wrap">
+          <img src="images/crown-trans.png" alt="Zircnova Esthetic Crown" />
+        </div>
+        <div class="product-info">
+          <div class="product-brand-row">
+            <span class="product-brand">Zircnova+ME</span>
+            <span class="product-type-tag">Multi-Layer</span>
+          </div>
+          <p class="product-name">Esthetic Multi-Layer Crown — OM1</p>
+          <div class="product-stars">★★★★★ <span class="review-num">(41)</span></div>
+          <div class="product-price-row">
+            <div class="product-price">$22.00</div>
+            <button class="btn-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="product-card">
+        <span class="product-badge" style="background:#DA3F3F;">Sale</span>
+        <div class="product-img-wrap">
+          <img src="images/crown-trans.png" alt="Zircnova Economy Crown" />
+        </div>
+        <div class="product-info">
+          <div class="product-brand-row">
+            <span class="product-brand">Zircnova●</span>
+            <span class="product-type-tag">Full Solid</span>
+          </div>
+          <p class="product-name">Economy Full Solid Crown — A3.5</p>
+          <div class="product-stars">★★★★☆ <span class="review-num">(302)</span></div>
+          <div class="product-price-row">
+            <div class="product-price">$8.99 <span class="old">$12.50</span></div>
+            <button class="btn-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="images/crown-trans.png" alt="Zircnova Temporary Crown" />
+        </div>
+        <div class="product-info">
+          <div class="product-brand-row">
+            <span class="product-brand">Zircnova+RE</span>
+            <span class="product-type-tag">Temporary</span>
+          </div>
+          <p class="product-name">Temporary Crown — Bleach White</p>
+          <div class="product-stars">★★★★☆ <span class="review-num">(55)</span></div>
+          <div class="product-price-row">
+            <div class="product-price">$6.99</div>
+            <button class="btn-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 9 -->
+      <div class="product-card">
+        <span class="product-badge best">Best Seller</span>
+        <div class="product-img-wrap">
+          <img src="images/crown-trans.png" alt="Zircnova Composite Crown" />
+        </div>
+        <div class="product-info">
+          <div class="product-brand-row">
+            <span class="product-brand">Zircnova+FX</span>
+            <span class="product-type-tag">Composite</span>
+          </div>
+          <p class="product-name">Composite Layered Crown — A2 Natural</p>
+          <div class="product-stars">★★★★★ <span class="review-num">(177)</span></div>
+          <div class="product-price-row">
+            <div class="product-price">$19.99</div>
+            <button class="btn-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 10 -->
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="images/crown-trans.png" alt="Zircnova Anterior Veneer" />
+        </div>
+        <div class="product-info">
+          <div class="product-brand-row">
+            <span class="product-brand">Zircnova+PRO</span>
+            <span class="product-type-tag">Anterior</span>
+          </div>
+          <p class="product-name">Anterior Veneer Crown — B1 Light</p>
+          <div class="product-stars">★★★★★ <span class="review-num">(92)</span></div>
+          <div class="product-price-row">
+            <div class="product-price">$24.99</div>
+            <button class="btn-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 11 -->
+      <div class="product-card">
+        <span class="product-badge" style="background:#DA3F3F;">Sale</span>
+        <div class="product-img-wrap">
+          <img src="images/crown-trans.png" alt="Zircnova Strength Crown" />
+        </div>
+        <div class="product-info">
+          <div class="product-brand-row">
+            <span class="product-brand">Zircnova●</span>
+            <span class="product-type-tag">Posterior</span>
+          </div>
+          <p class="product-name">High Strength Posterior Crown — A3</p>
+          <div class="product-stars">★★★★☆ <span class="review-num">(228)</span></div>
+          <div class="product-price-row">
+            <div class="product-price">$11.50 <span class="old">$16.00</span></div>
+            <button class="btn-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 12 -->
+      <div class="product-card">
+        <span class="product-badge new">New</span>
+        <div class="product-img-wrap">
+          <img src="images/crown-trans.png" alt="Zircnova Monolithic Crown" />
+        </div>
+        <div class="product-info">
+          <div class="product-brand-row">
+            <span class="product-brand">Zircnova+ME</span>
+            <span class="product-type-tag">Full Solid</span>
+          </div>
+          <p class="product-name">Monolithic Zirconia Crown — A1 Bright</p>
+          <div class="product-stars">★★★★★ <span class="review-num">(34)</span></div>
+          <div class="product-price-row">
+            <div class="product-price">$17.50</div>
+            <button class="btn-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination">
+      <a href="#" class="page-btn">‹</a>
+      <a href="#" class="page-btn active">1</a>
+      <a href="#" class="page-btn">2</a>
+      <a href="#" class="page-btn">3</a>
+      <span style="color:#ccc;font-size:14px;padding:0 4px;">…</span>
+      <a href="#" class="page-btn">10</a>
+      <a href="#" class="page-btn">›</a>
+    </div>
+
+  </main>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Zircnova●</div>
+        <p class="footer-tagline">Professional beauty supply distributor. Serving nail salons, spas, and beauty professionals across the United States since 2010.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn">f</a>
+          <a href="#" class="social-btn">ig</a>
+          <a href="#" class="social-btn">yt</a>
+          <a href="#" class="social-btn">tk</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Shop</p>
+        <ul class="footer-links">
+          <li><a href="#">All Products</a></li>
+          <li><a href="products.html">Full Solid Crowns</a></li>
+          <li><a href="#">Multi-Layer</a></li>
+          <li><a href="#">Anterior</a></li>
+          <li><a href="#">Posterior</a></li>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Sale Items</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Brands</p>
+        <ul class="footer-links">
+          <li><a href="#">Zircnova Core</a></li>
+          <li><a href="#">Zircnova+RE</a></li>
+          <li><a href="#">Zircnova+ME</a></li>
+          <li><a href="#">Zircnova+PRO</a></li>
+          <li><a href="#">Zircnova+LED</a></li>
+          <li><a href="#">Zircnova+FX</a></li>
+          <li><a href="#">All Brands</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Account</p>
+        <ul class="footer-links">
+          <li><a href="#">Wholesale Login</a></li>
+          <li><a href="#">Apply for Account</a></li>
+          <li><a href="#">Order History</a></li>
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Loyalty Points</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Help</p>
+        <ul class="footer-links">
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Return Policy</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Zircnova. All rights reserved.</span>
+      <span>
+        <a href="#">Privacy</a> &nbsp;·&nbsp; <a href="#">Terms</a> &nbsp;·&nbsp; <a href="#">Sitemap</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
