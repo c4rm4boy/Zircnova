@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -31,7 +31,7 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ── Announcement Bar ── */
+    /* â”€â”€ Announcement Bar â”€â”€ */
     .announce-bar {
       background: var(--blue);
       color: #fff;
@@ -42,7 +42,7 @@
     }
     .announce-bar a { color: #fff; text-decoration: underline; font-weight: 600; }
 
-    /* ── Header ── */
+    /* â”€â”€ Header â”€â”€ */
     header {
       background: #fff;
       border-bottom: 1px solid var(--border);
@@ -139,7 +139,7 @@
       font-weight: 700;
     }
 
-    /* ── Nav ── */
+    /* â”€â”€ Nav â”€â”€ */
     nav {
       background: #fff;
       border-bottom: 2px solid var(--border);
@@ -186,7 +186,7 @@
     }
     .nav-cta:hover { background: var(--blue-hover) !important; color: #fff !important; }
 
-    /* ── Register Page ── */
+    /* â”€â”€ Register Page â”€â”€ */
     .register-section {
       min-height: calc(100vh - 280px);
       padding: 60px 24px 80px;
@@ -292,7 +292,7 @@
       text-transform: uppercase;
     }
 
-    /* ── Social Buttons ── */
+    /* â”€â”€ Social Buttons â”€â”€ */
     .social-btn {
       display: flex;
       align-items: center;
@@ -330,7 +330,7 @@
     .social-amazon { background: #ff9900; color: #111; }
     .social-amazon .s-icon { color: #111; }
 
-    /* ── Status Message ── */
+    /* â”€â”€ Status Message â”€â”€ */
     .status-msg {
       padding: 12px 16px;
       border-radius: 3px;
@@ -341,7 +341,7 @@
     .status-msg.success { background: #e8f5e9; color: #2e7d32; border: 1px solid #a5d6a7; display: block; }
     .status-msg.error { background: #ffebee; color: #c62828; border: 1px solid #ef9a9a; display: block; }
 
-    /* ── Footer ── */
+    /* â”€â”€ Footer â”€â”€ */
     footer {
       background: #1a1a1a;
       color: #ccc;
@@ -400,59 +400,9 @@
     .footer-bottom a:hover { color: #ccc; }
   </style>
 </head>
-<body>
+<body data-page="register">
 
-<!-- Announcement Bar -->
-<div class="announce-bar">
-  🎉 Get 20% Off with Offer Code: <strong>DISC20</strong> &nbsp;|&nbsp; Free Shipping on orders over $150 &nbsp;|&nbsp; <a href="#">Shop the Disc Day Sale →</a>
-</div>
-
-<!-- Header -->
-<header>
-  <div class="header-inner">
-    <a href="index.html" class="logo">
-      <span>Zircnova</span><span class="logo-dot"></span>
-    </a>
-    <div class="search-wrap">
-      <input type="text" placeholder="Search for products, brands, categories..." />
-      <button>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      </button>
-    </div>
-    <div class="header-icons">
-      <a href="login.html" id="account-btn" class="icon-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        <span class="account-label">Account</span>
-      </a>
-      <a href="#" class="icon-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg>
-        <span>Orders</span>
-      </a>
-      <a href="#" class="icon-btn cart-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-        <span class="cart-badge">3</span>
-        <span>Cart</span>
-      </a>
-    </div>
-  </div>
-</header>
-
-<!-- Navigation -->
-<nav>
-  <div class="nav-inner">
-    <a href="index.html" class="nav-item">Home</a>
-    <a href="#" class="nav-item">Store</a>
-    <a href="products.html" class="nav-item">Products</a>
-    <a href="#" class="nav-item">Brands</a>
-    <a href="#" class="nav-item">Gel</a>
-    <a href="#" class="nav-item">Acrylic</a>
-    <a href="#" class="nav-item">Tools</a>
-    <a href="#" class="nav-item">Accessories</a>
-    <a href="#" class="nav-item">Sale</a>
-    <a href="#" class="nav-item">New Arrivals</a>
-    <a href="#" class="nav-cta nav-item">Wholesale Login</a>
-  </div>
-</nav>
+<div id="site-header"></div>
 
 <!-- Register Section -->
 <section class="register-section">
@@ -479,7 +429,7 @@
       <button type="submit" class="register-btn" id="submit-btn">Create My Account</button>
     </form>
 
-    <a href="index.html" class="return-link">← Return to Store</a>
+    <a href="index.html" class="return-link">â† Return to Store</a>
 
     <div class="divider"><span>or sign in with</span></div>
 
@@ -526,75 +476,7 @@
   </div>
 </section>
 
-<!-- Footer -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="footer-logo">Zircnova●</div>
-        <p class="footer-tagline">Professional beauty supply distributor. Serving nail salons, spas, and beauty professionals across the United States since 2010.</p>
-        <div class="footer-socials">
-          <a href="#">f</a>
-          <a href="#">ig</a>
-          <a href="#">yt</a>
-          <a href="#">tk</a>
-        </div>
-      </div>
-      <div>
-        <p class="footer-col-title">Shop</p>
-        <ul class="footer-links">
-          <li><a href="#">All Products</a></li>
-          <li><a href="#">Gel Polishes</a></li>
-          <li><a href="#">Acrylic Systems</a></li>
-          <li><a href="#">Tools & Equipment</a></li>
-          <li><a href="#">Accessories</a></li>
-          <li><a href="#">New Arrivals</a></li>
-          <li><a href="#">Sale Items</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="footer-col-title">Brands</p>
-        <ul class="footer-links">
-          <li><a href="#">Zircnova Core</a></li>
-          <li><a href="#">Zircnova+RE</a></li>
-          <li><a href="#">Zircnova+ME</a></li>
-          <li><a href="#">Zircnova+PRO</a></li>
-          <li><a href="#">Zircnova+LED</a></li>
-          <li><a href="#">Zircnova+FX</a></li>
-          <li><a href="#">All Brands</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="footer-col-title">Account</p>
-        <ul class="footer-links">
-          <li><a href="#">Wholesale Login</a></li>
-          <li><a href="register.html">Create Account</a></li>
-          <li><a href="#">Order History</a></li>
-          <li><a href="#">Track Order</a></li>
-          <li><a href="#">Returns</a></li>
-          <li><a href="#">Loyalty Points</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="footer-col-title">Help</p>
-        <ul class="footer-links">
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Shipping Policy</a></li>
-          <li><a href="#">Return Policy</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of Service</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 Zircnova. All rights reserved.</span>
-      <span>
-        <a href="#">Privacy</a> &nbsp;·&nbsp; <a href="#">Terms</a> &nbsp;·&nbsp; <a href="#">Sitemap</a>
-      </span>
-    </div>
-  </div>
-</footer>
+<div id="site-footer"></div>
 
 <script>
   const SUPABASE_URL = 'https://uaofatcgdvpcysaviima.supabase.co';
@@ -629,7 +511,7 @@
     }
 
     submitBtn.disabled = true;
-    submitBtn.textContent = 'Creating Account…';
+    submitBtn.textContent = 'Creating Accountâ€¦';
 
     const { data, error } = await sb.auth.signUp({
       email,
@@ -670,6 +552,7 @@
     if (error) showStatus('Could not connect to ' + provider + ': ' + error.message, 'error');
   }
 </script>
+<script src="scripts/layout.js"></script>
 <script src="scripts/auth.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -30,7 +30,7 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ── Announcement Bar ── */
+    /* â”€â”€ Announcement Bar â”€â”€ */
     .announce-bar {
       background: var(--blue);
       color: #fff;
@@ -41,7 +41,7 @@
     }
     .announce-bar a { color: #fff; text-decoration: underline; font-weight: 600; }
 
-    /* ── Header ── */
+    /* â”€â”€ Header â”€â”€ */
     header {
       background: #fff;
       border-bottom: 1px solid var(--border);
@@ -138,7 +138,7 @@
       font-weight: 700;
     }
 
-    /* ── Nav ── */
+    /* â”€â”€ Nav â”€â”€ */
     nav {
       background: #fff;
       border-bottom: 2px solid var(--border);
@@ -185,7 +185,7 @@
     }
     .nav-cta:hover { background: var(--blue-hover) !important; color: #fff !important; }
 
-    /* ── Breadcrumb ── */
+    /* â”€â”€ Breadcrumb â”€â”€ */
     .breadcrumb {
       background: var(--bg2);
       border-bottom: 1px solid var(--border);
@@ -208,7 +208,7 @@
     .breadcrumb-inner a:hover { text-decoration: underline; }
     .breadcrumb-sep { color: #ccc; }
 
-    /* ── Page Layout ── */
+    /* â”€â”€ Page Layout â”€â”€ */
     .page-wrap {
       max-width: 1240px;
       margin: 0 auto;
@@ -218,7 +218,7 @@
       align-items: flex-start;
     }
 
-    /* ── Sidebar ── */
+    /* â”€â”€ Sidebar â”€â”€ */
     .sidebar {
       width: 210px;
       flex-shrink: 0;
@@ -329,7 +329,7 @@
       letter-spacing: 2px;
     }
 
-    /* ── Main Content ── */
+    /* â”€â”€ Main Content â”€â”€ */
     .main-content { flex: 1; min-width: 0; }
 
     .page-header {
@@ -396,7 +396,7 @@
     }
     .view-btn svg { width: 14px; height: 14px; }
 
-    /* ── Featured Banner ── */
+    /* â”€â”€ Featured Banner â”€â”€ */
     .featured-banner {
       background: linear-gradient(135deg, #0d2d5e 0%, #1a4580 60%, #2a5fa8 100%);
       border-radius: 6px;
@@ -469,7 +469,7 @@
       pointer-events: none;
     }
 
-    /* ── Product Grid ── */
+    /* â”€â”€ Product Grid â”€â”€ */
     .product-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -605,7 +605,7 @@
     }
     .btn-cart:hover { background: var(--blue-hover); }
 
-    /* ── Pagination ── */
+    /* â”€â”€ Pagination â”€â”€ */
     .pagination {
       display: flex;
       align-items: center;
@@ -631,7 +631,7 @@
     .page-btn:hover { border-color: var(--blue); color: var(--blue); }
     .page-btn.active { background: var(--blue); border-color: var(--blue); color: #fff; }
 
-    /* ── Footer ── */
+    /* â”€â”€ Footer â”€â”€ */
     footer {
       background: #1a1a1a;
       color: rgba(255,255,255,.7);
@@ -706,67 +706,17 @@
     .footer-bottom a:hover { color: rgba(255,255,255,.6); }
   </style>
 </head>
-<body>
+<body data-page="products">
 
-<!-- Announcement Bar -->
-<div class="announce-bar">
-  🎉 Get 20% Off with Offer Code: <strong>DISC20</strong> &nbsp;|&nbsp; Free Shipping on orders over $150 &nbsp;|&nbsp; <a href="#">Shop the Disc Day Sale →</a>
-</div>
-
-<!-- Header -->
-<header>
-  <div class="header-inner">
-    <a href="index.html" class="logo">
-      <span>Zircnova</span><span class="logo-dot"></span>
-    </a>
-    <div class="search-wrap">
-      <input type="text" placeholder="Search for products, brands, categories..." />
-      <button>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      </button>
-    </div>
-    <div class="header-icons">
-      <a href="login.html" id="account-btn" class="icon-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        <span class="account-label">Account</span>
-      </a>
-      <a href="#" class="icon-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg>
-        <span>Orders</span>
-      </a>
-      <a href="#" class="icon-btn cart-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-        <span class="cart-badge">3</span>
-        <span>Cart</span>
-      </a>
-    </div>
-  </div>
-</header>
-
-<!-- Navigation -->
-<nav>
-  <div class="nav-inner">
-    <a href="index.html" class="nav-item">Home</a>
-    <a href="#" class="nav-item">Store</a>
-    <a href="products.html" class="nav-item active">Products</a>
-    <a href="#" class="nav-item">Brands</a>
-    <a href="#" class="nav-item">Gel</a>
-    <a href="#" class="nav-item">Acrylic</a>
-    <a href="#" class="nav-item">Tools</a>
-    <a href="#" class="nav-item">Accessories</a>
-    <a href="#" class="nav-item">Sale</a>
-    <a href="#" class="nav-item">New Arrivals</a>
-    <a href="#" class="nav-cta nav-item">Wholesale Login</a>
-  </div>
-</nav>
+<div id="site-header"></div>
 
 <!-- Breadcrumb -->
 <div class="breadcrumb">
   <div class="breadcrumb-inner">
     <a href="index.html">Home</a>
-    <span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-sep">â€º</span>
     <a href="products.html">Products</a>
-    <span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-sep">â€º</span>
     <span>Full Solid Crowns</span>
   </div>
 </div>
@@ -774,14 +724,14 @@
 <!-- Page Body -->
 <div class="page-wrap">
 
-  <!-- ── Sidebar ── -->
+  <!-- â”€â”€ Sidebar â”€â”€ -->
   <aside class="sidebar">
 
-    <a href="products.html" class="sidebar-cta">← Back to All Products</a>
+    <a href="products.html" class="sidebar-cta">â† Back to All Products</a>
 
     <!-- Rating Badge -->
     <div class="sidebar-badge">
-      <div class="badge-stars">★★★★★</div>
+      <div class="badge-stars">â˜…â˜…â˜…â˜…â˜…</div>
       <div class="badge-num">875</div>
       <div class="badge-label">Verified Reviews</div>
     </div>
@@ -793,7 +743,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
       </div>
       <div class="sidebar-body" id="brand-list">
-        <div style="color:#aaa;font-size:12px;padding:4px 0">Loading…</div>
+        <div style="color:#aaa;font-size:12px;padding:4px 0">Loadingâ€¦</div>
       </div>
     </div>
 
@@ -804,7 +754,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
       </div>
       <div class="sidebar-body" id="type-list">
-        <div style="color:#aaa;font-size:12px;padding:4px 0">Loading…</div>
+        <div style="color:#aaa;font-size:12px;padding:4px 0">Loadingâ€¦</div>
       </div>
     </div>
 
@@ -815,7 +765,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
       </div>
       <div class="sidebar-body" id="shade-list">
-        <div style="color:#aaa;font-size:12px;padding:4px 0">Loading…</div>
+        <div style="color:#aaa;font-size:12px;padding:4px 0">Loadingâ€¦</div>
       </div>
     </div>
 
@@ -827,15 +777,15 @@
       </div>
       <div class="sidebar-body">
         <label class="filter-item"><input type="checkbox" data-key="price" data-val="under10" onchange="onFilter()" /> Under $10</label>
-        <label class="filter-item"><input type="checkbox" data-key="price" data-val="10to20"  onchange="onFilter()" /> $10 – $20</label>
-        <label class="filter-item"><input type="checkbox" data-key="price" data-val="20to35"  onchange="onFilter()" /> $20 – $35</label>
+        <label class="filter-item"><input type="checkbox" data-key="price" data-val="10to20"  onchange="onFilter()" /> $10 â€“ $20</label>
+        <label class="filter-item"><input type="checkbox" data-key="price" data-val="20to35"  onchange="onFilter()" /> $20 â€“ $35</label>
         <label class="filter-item"><input type="checkbox" data-key="price" data-val="over35"  onchange="onFilter()" /> Over $35</label>
       </div>
     </div>
 
   </aside>
 
-  <!-- ── Main Content ── -->
+  <!-- â”€â”€ Main Content â”€â”€ -->
   <main class="main-content">
 
     <!-- Page Header -->
@@ -869,14 +819,14 @@
       <div class="banner-text">
         <p class="banner-eyebrow">Now Available</p>
         <h2 class="banner-title">MULTI-LAYER <span>2.0</span></h2>
-        <p class="banner-sub">Our most advanced zirconia crown yet — enhanced translucency gradient with superior strength. Lab-certified strength of 1,200 MPa.</p>
+        <p class="banner-sub">Our most advanced zirconia crown yet â€” enhanced translucency gradient with superior strength. Lab-certified strength of 1,200 MPa.</p>
       </div>
       <a href="#" class="banner-cta">Shop Multi-Layer 2.0</a>
     </div>
 
     <!-- Product Grid -->
     <div class="product-grid" id="product-grid">
-      <div style="grid-column:1/-1;text-align:center;padding:48px;color:#aaa;font-size:14px;">Loading products…</div>
+      <div style="grid-column:1/-1;text-align:center;padding:48px;color:#aaa;font-size:14px;">Loading productsâ€¦</div>
     </div>
 
     <!-- Pagination -->
@@ -895,10 +845,10 @@
   let currentPage = 1;
   let sortKey     = 'sort_order';
 
-  // ── Active filters ──────────────────────────────────────────
+  // â”€â”€ Active filters â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   const activeFilters = { brand: new Set(), type: new Set(), shade: new Set(), price: new Set() };
 
-  // ── Fetch all products once ──────────────────────────────────
+  // â”€â”€ Fetch all products once â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   async function fetchProducts() {
     const res = await fetch(
       `${SUPABASE_URL}/rest/v1/products?select=*&order=sort_order.asc`,
@@ -909,7 +859,7 @@
     applyFilters();
   }
 
-  // ── Build sidebar filter counts dynamically ──────────────────
+  // â”€â”€ Build sidebar filter counts dynamically â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   function buildSidebar() {
     const totalReviews = allProducts.reduce((s, p) => s + (p.review_count || 0), 0);
     document.querySelector('.badge-num').textContent = totalReviews.toLocaleString();
@@ -931,7 +881,7 @@
     }).join('');
   }
 
-  // ── Filter + sort ────────────────────────────────────────────
+  // â”€â”€ Filter + sort â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   function onFilter() {
     ['brand','type','shade'].forEach(key => {
       activeFilters[key].clear();
@@ -974,10 +924,10 @@
     renderPagination();
   }
 
-  // ── Render product cards ─────────────────────────────────────
+  // â”€â”€ Render product cards â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   function stars(rating) {
     const full = Math.round(rating);
-    return '★'.repeat(full) + '☆'.repeat(5 - full);
+    return 'â˜…'.repeat(full) + 'â˜†'.repeat(5 - full);
   }
 
   function badgeHTML(badge) {
@@ -1020,21 +970,21 @@
       : '<div style="grid-column:1/-1;text-align:center;padding:48px;color:#aaa;">No products match your filters.</div>';
   }
 
-  // ── Pagination ───────────────────────────────────────────────
+  // â”€â”€ Pagination â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   function renderPagination() {
     const total = Math.ceil(filtered.length / PAGE_SIZE);
     const el = document.getElementById('pagination');
     if (total <= 1) { el.innerHTML = ''; return; }
 
-    let html = `<a class="page-btn" onclick="goPage(${currentPage - 1})">‹</a>`;
+    let html = `<a class="page-btn" onclick="goPage(${currentPage - 1})">â€¹</a>`;
     for (let i = 1; i <= total; i++) {
       if (i === 1 || i === total || Math.abs(i - currentPage) <= 1) {
         html += `<a class="page-btn ${i === currentPage ? 'active' : ''}" onclick="goPage(${i})">${i}</a>`;
       } else if (Math.abs(i - currentPage) === 2) {
-        html += `<span style="color:#ccc;font-size:14px;padding:0 4px">…</span>`;
+        html += `<span style="color:#ccc;font-size:14px;padding:0 4px">â€¦</span>`;
       }
     }
-    html += `<a class="page-btn" onclick="goPage(${currentPage + 1})">›</a>`;
+    html += `<a class="page-btn" onclick="goPage(${currentPage + 1})">â€º</a>`;
     el.innerHTML = html;
   }
 
@@ -1047,7 +997,7 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  // ── Sort select ──────────────────────────────────────────────
+  // â”€â”€ Sort select â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   document.querySelector('.sort-select').addEventListener('change', e => {
     const map = {
       'Best Recommended': 'sort_order',
@@ -1064,77 +1014,10 @@
   fetchProducts();
 </script>
 
-<!-- Footer -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-logo">Zircnova●</div>
-        <p class="footer-tagline">Professional beauty supply distributor. Serving nail salons, spas, and beauty professionals across the United States since 2010.</p>
-        <div class="footer-socials">
-          <a href="#" class="social-btn">f</a>
-          <a href="#" class="social-btn">ig</a>
-          <a href="#" class="social-btn">yt</a>
-          <a href="#" class="social-btn">tk</a>
-        </div>
-      </div>
-      <div>
-        <p class="footer-col-title">Shop</p>
-        <ul class="footer-links">
-          <li><a href="#">All Products</a></li>
-          <li><a href="products.html">Full Solid Crowns</a></li>
-          <li><a href="#">Multi-Layer</a></li>
-          <li><a href="#">Anterior</a></li>
-          <li><a href="#">Posterior</a></li>
-          <li><a href="#">New Arrivals</a></li>
-          <li><a href="#">Sale Items</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="footer-col-title">Brands</p>
-        <ul class="footer-links">
-          <li><a href="#">Zircnova Core</a></li>
-          <li><a href="#">Zircnova+RE</a></li>
-          <li><a href="#">Zircnova+ME</a></li>
-          <li><a href="#">Zircnova+PRO</a></li>
-          <li><a href="#">Zircnova+LED</a></li>
-          <li><a href="#">Zircnova+FX</a></li>
-          <li><a href="#">All Brands</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="footer-col-title">Account</p>
-        <ul class="footer-links">
-          <li><a href="#">Wholesale Login</a></li>
-          <li><a href="#">Apply for Account</a></li>
-          <li><a href="#">Order History</a></li>
-          <li><a href="#">Track Order</a></li>
-          <li><a href="#">Returns</a></li>
-          <li><a href="#">Loyalty Points</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="footer-col-title">Help</p>
-        <ul class="footer-links">
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Shipping Policy</a></li>
-          <li><a href="#">Return Policy</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of Service</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 Zircnova. All rights reserved.</span>
-      <span>
-        <a href="#">Privacy</a> &nbsp;·&nbsp; <a href="#">Terms</a> &nbsp;·&nbsp; <a href="#">Sitemap</a>
-      </span>
-    </div>
-  </div>
-</footer>
+<div id="site-footer"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="scripts/layout.js"></script>
 <script src="scripts/auth.js"></script>
 </body>
 </html>
