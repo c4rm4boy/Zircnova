@@ -420,9 +420,9 @@
       </button>
     </div>
     <div class="header-icons">
-      <a href="register.html" class="icon-btn" style="color:var(--blue)">
+      <a href="login.html" id="account-btn" class="icon-btn">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        <span>Account</span>
+        <span class="account-label">Account</span>
       </a>
       <a href="#" class="icon-btn">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg>
@@ -670,6 +670,6 @@
     if (error) showStatus('Could not connect to ' + provider + ': ' + error.message, 'error');
   }
 </script>
-
+<script src="scripts/auth.js"></script>
 </body>
 </html>
