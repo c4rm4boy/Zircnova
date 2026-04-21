@@ -4,7 +4,7 @@ import { join } from 'path';
 
 const url = process.argv[2] || 'http://localhost:3000';
 const label = process.argv[3] || '';
-const dir = './temporary screenshots';
+const dir = './dev/screenshots';
 
 if (!existsSync(dir)) mkdirSync(dir, { recursive: true });
 
