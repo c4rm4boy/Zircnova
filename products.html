@@ -792,37 +792,8 @@
         Shop by Brand
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
       </div>
-      <div class="sidebar-body">
-        <label class="filter-item">
-          <input type="checkbox" checked />
-          <span class="filter-brand-logo">Zircnova●</span>
-          <span class="filter-count">48</span>
-        </label>
-        <label class="filter-item">
-          <input type="checkbox" />
-          Zircnova+PRO
-          <span class="filter-count">24</span>
-        </label>
-        <label class="filter-item">
-          <input type="checkbox" />
-          Zircnova+RE
-          <span class="filter-count">18</span>
-        </label>
-        <label class="filter-item">
-          <input type="checkbox" />
-          Zircnova+ME
-          <span class="filter-count">12</span>
-        </label>
-        <label class="filter-item">
-          <input type="checkbox" />
-          Zircnova+LED
-          <span class="filter-count">9</span>
-        </label>
-        <label class="filter-item">
-          <input type="checkbox" />
-          Zircnova+FX
-          <span class="filter-count">6</span>
-        </label>
+      <div class="sidebar-body" id="brand-list">
+        <div style="color:#aaa;font-size:12px;padding:4px 0">Loading…</div>
       </div>
     </div>
 
@@ -832,37 +803,8 @@
         Shop by Type
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
       </div>
-      <div class="sidebar-body">
-        <label class="filter-item">
-          <input type="checkbox" checked />
-          Full Solid
-          <span class="filter-count">38</span>
-        </label>
-        <label class="filter-item">
-          <input type="checkbox" />
-          Multi-Layer
-          <span class="filter-count">22</span>
-        </label>
-        <label class="filter-item">
-          <input type="checkbox" />
-          Anterior
-          <span class="filter-count">16</span>
-        </label>
-        <label class="filter-item">
-          <input type="checkbox" />
-          Posterior
-          <span class="filter-count">14</span>
-        </label>
-        <label class="filter-item">
-          <input type="checkbox" />
-          Composite
-          <span class="filter-count">11</span>
-        </label>
-        <label class="filter-item">
-          <input type="checkbox" />
-          Temporary
-          <span class="filter-count">8</span>
-        </label>
+      <div class="sidebar-body" id="type-list">
+        <div style="color:#aaa;font-size:12px;padding:4px 0">Loading…</div>
       </div>
     </div>
 
@@ -872,32 +814,8 @@
         Shop by Shade
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
       </div>
-      <div class="sidebar-body">
-        <label class="filter-item">
-          <input type="checkbox" />
-          A1 / Bright White
-          <span class="filter-count">20</span>
-        </label>
-        <label class="filter-item">
-          <input type="checkbox" />
-          A2 / Natural
-          <span class="filter-count">34</span>
-        </label>
-        <label class="filter-item">
-          <input type="checkbox" />
-          A3 / Medium
-          <span class="filter-count">28</span>
-        </label>
-        <label class="filter-item">
-          <input type="checkbox" />
-          B1 / Light
-          <span class="filter-count">15</span>
-        </label>
-        <label class="filter-item">
-          <input type="checkbox" />
-          OM1 / Bleached
-          <span class="filter-count">10</span>
-        </label>
+      <div class="sidebar-body" id="shade-list">
+        <div style="color:#aaa;font-size:12px;padding:4px 0">Loading…</div>
       </div>
     </div>
 
@@ -908,10 +826,10 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
       </div>
       <div class="sidebar-body">
-        <label class="filter-item"><input type="checkbox" /> Under $10 <span class="filter-count">12</span></label>
-        <label class="filter-item"><input type="checkbox" checked /> $10 – $20 <span class="filter-count">31</span></label>
-        <label class="filter-item"><input type="checkbox" /> $20 – $35 <span class="filter-count">18</span></label>
-        <label class="filter-item"><input type="checkbox" /> Over $35 <span class="filter-count">6</span></label>
+        <label class="filter-item"><input type="checkbox" data-key="price" data-val="under10" onchange="onFilter()" /> Under $10</label>
+        <label class="filter-item"><input type="checkbox" data-key="price" data-val="10to20"  onchange="onFilter()" /> $10 – $20</label>
+        <label class="filter-item"><input type="checkbox" data-key="price" data-val="20to35"  onchange="onFilter()" /> $20 – $35</label>
+        <label class="filter-item"><input type="checkbox" data-key="price" data-val="over35"  onchange="onFilter()" /> Over $35</label>
       </div>
     </div>
 
@@ -957,259 +875,194 @@
     </div>
 
     <!-- Product Grid -->
-    <div class="product-grid">
-
-      <!-- Card 1 -->
-      <div class="product-card">
-        <span class="product-badge best">Best Seller</span>
-        <div class="product-img-wrap">
-          <img src="images/crown-trans.png" alt="Zircnova Full Solid Crown" />
-        </div>
-        <div class="product-info">
-          <div class="product-brand-row">
-            <span class="product-brand">Zircnova●</span>
-            <span class="product-type-tag">Full Solid</span>
-          </div>
-          <p class="product-name">Full Solid Zirconia Crown — A2 Shade</p>
-          <div class="product-stars">★★★★★ <span class="review-num">(214)</span></div>
-          <div class="product-price-row">
-            <div class="product-price">$12.99</div>
-            <button class="btn-cart">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="product-card">
-        <span class="product-badge new">New</span>
-        <div class="product-img-wrap">
-          <img src="images/crown-trans.png" alt="Zircnova Multi-Layer Crown" />
-        </div>
-        <div class="product-info">
-          <div class="product-brand-row">
-            <span class="product-brand">Zircnova+PRO</span>
-            <span class="product-type-tag">Multi-Layer</span>
-          </div>
-          <p class="product-name">Multi-Layer 2.0 Premium Crown — A1</p>
-          <div class="product-stars">★★★★★ <span class="review-num">(89)</span></div>
-          <div class="product-price-row">
-            <div class="product-price">$18.99</div>
-            <button class="btn-cart">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="product-card">
-        <div class="product-img-wrap">
-          <img src="images/crown-trans.png" alt="Zircnova Anterior Crown" />
-        </div>
-        <div class="product-info">
-          <div class="product-brand-row">
-            <span class="product-brand">Zircnova+RE</span>
-            <span class="product-type-tag">Anterior</span>
-          </div>
-          <p class="product-name">High-Translucency Anterior Crown — B1</p>
-          <div class="product-stars">★★★★☆ <span class="review-num">(67)</span></div>
-          <div class="product-price-row">
-            <div class="product-price">$14.50</div>
-            <button class="btn-cart">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="product-card">
-        <span class="product-badge" style="background:#DA3F3F;">Sale</span>
-        <div class="product-img-wrap">
-          <img src="images/crown-trans.png" alt="Zircnova Posterior Crown" />
-        </div>
-        <div class="product-info">
-          <div class="product-brand-row">
-            <span class="product-brand">Zircnova●</span>
-            <span class="product-type-tag">Posterior</span>
-          </div>
-          <p class="product-name">Posterior Full Solid Crown — A3 Shade</p>
-          <div class="product-stars">★★★★★ <span class="review-num">(143)</span></div>
-          <div class="product-price-row">
-            <div class="product-price">$10.99 <span class="old">$15.99</span></div>
-            <button class="btn-cart">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 5 -->
-      <div class="product-card">
-        <div class="product-img-wrap">
-          <img src="images/crown-trans.png" alt="Zircnova Ultra Crown" />
-        </div>
-        <div class="product-info">
-          <div class="product-brand-row">
-            <span class="product-brand">Zircnova+PRO</span>
-            <span class="product-type-tag">Full Solid</span>
-          </div>
-          <p class="product-name">Ultra Strength Zirconia Crown — A2</p>
-          <div class="product-stars">★★★★★ <span class="review-num">(198)</span></div>
-          <div class="product-price-row">
-            <div class="product-price">$16.50</div>
-            <button class="btn-cart">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 6 -->
-      <div class="product-card">
-        <span class="product-badge new">New</span>
-        <div class="product-img-wrap">
-          <img src="images/crown-trans.png" alt="Zircnova Esthetic Crown" />
-        </div>
-        <div class="product-info">
-          <div class="product-brand-row">
-            <span class="product-brand">Zircnova+ME</span>
-            <span class="product-type-tag">Multi-Layer</span>
-          </div>
-          <p class="product-name">Esthetic Multi-Layer Crown — OM1</p>
-          <div class="product-stars">★★★★★ <span class="review-num">(41)</span></div>
-          <div class="product-price-row">
-            <div class="product-price">$22.00</div>
-            <button class="btn-cart">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 7 -->
-      <div class="product-card">
-        <span class="product-badge" style="background:#DA3F3F;">Sale</span>
-        <div class="product-img-wrap">
-          <img src="images/crown-trans.png" alt="Zircnova Economy Crown" />
-        </div>
-        <div class="product-info">
-          <div class="product-brand-row">
-            <span class="product-brand">Zircnova●</span>
-            <span class="product-type-tag">Full Solid</span>
-          </div>
-          <p class="product-name">Economy Full Solid Crown — A3.5</p>
-          <div class="product-stars">★★★★☆ <span class="review-num">(302)</span></div>
-          <div class="product-price-row">
-            <div class="product-price">$8.99 <span class="old">$12.50</span></div>
-            <button class="btn-cart">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 8 -->
-      <div class="product-card">
-        <div class="product-img-wrap">
-          <img src="images/crown-trans.png" alt="Zircnova Temporary Crown" />
-        </div>
-        <div class="product-info">
-          <div class="product-brand-row">
-            <span class="product-brand">Zircnova+RE</span>
-            <span class="product-type-tag">Temporary</span>
-          </div>
-          <p class="product-name">Temporary Crown — Bleach White</p>
-          <div class="product-stars">★★★★☆ <span class="review-num">(55)</span></div>
-          <div class="product-price-row">
-            <div class="product-price">$6.99</div>
-            <button class="btn-cart">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 9 -->
-      <div class="product-card">
-        <span class="product-badge best">Best Seller</span>
-        <div class="product-img-wrap">
-          <img src="images/crown-trans.png" alt="Zircnova Composite Crown" />
-        </div>
-        <div class="product-info">
-          <div class="product-brand-row">
-            <span class="product-brand">Zircnova+FX</span>
-            <span class="product-type-tag">Composite</span>
-          </div>
-          <p class="product-name">Composite Layered Crown — A2 Natural</p>
-          <div class="product-stars">★★★★★ <span class="review-num">(177)</span></div>
-          <div class="product-price-row">
-            <div class="product-price">$19.99</div>
-            <button class="btn-cart">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 10 -->
-      <div class="product-card">
-        <div class="product-img-wrap">
-          <img src="images/crown-trans.png" alt="Zircnova Anterior Veneer" />
-        </div>
-        <div class="product-info">
-          <div class="product-brand-row">
-            <span class="product-brand">Zircnova+PRO</span>
-            <span class="product-type-tag">Anterior</span>
-          </div>
-          <p class="product-name">Anterior Veneer Crown — B1 Light</p>
-          <div class="product-stars">★★★★★ <span class="review-num">(92)</span></div>
-          <div class="product-price-row">
-            <div class="product-price">$24.99</div>
-            <button class="btn-cart">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 11 -->
-      <div class="product-card">
-        <span class="product-badge" style="background:#DA3F3F;">Sale</span>
-        <div class="product-img-wrap">
-          <img src="images/crown-trans.png" alt="Zircnova Strength Crown" />
-        </div>
-        <div class="product-info">
-          <div class="product-brand-row">
-            <span class="product-brand">Zircnova●</span>
-            <span class="product-type-tag">Posterior</span>
-          </div>
-          <p class="product-name">High Strength Posterior Crown — A3</p>
-          <div class="product-stars">★★★★☆ <span class="review-num">(228)</span></div>
-          <div class="product-price-row">
-            <div class="product-price">$11.50 <span class="old">$16.00</span></div>
-            <button class="btn-cart">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 12 -->
-      <div class="product-card">
-        <span class="product-badge new">New</span>
-        <div class="product-img-wrap">
-          <img src="images/crown-trans.png" alt="Zircnova Monolithic Crown" />
-        </div>
-        <div class="product-info">
-          <div class="product-brand-row">
-            <span class="product-brand">Zircnova+ME</span>
-            <span class="product-type-tag">Full Solid</span>
-          </div>
-          <p class="product-name">Monolithic Zirconia Crown — A1 Bright</p>
-          <div class="product-stars">★★★★★ <span class="review-num">(34)</span></div>
-          <div class="product-price-row">
-            <div class="product-price">$17.50</div>
-            <button class="btn-cart">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
+    <div class="product-grid" id="product-grid">
+      <div style="grid-column:1/-1;text-align:center;padding:48px;color:#aaa;font-size:14px;">Loading products…</div>
     </div>
 
     <!-- Pagination -->
-    <div class="pagination">
-      <a href="#" class="page-btn">‹</a>
-      <a href="#" class="page-btn active">1</a>
-      <a href="#" class="page-btn">2</a>
-      <a href="#" class="page-btn">3</a>
-      <span style="color:#ccc;font-size:14px;padding:0 4px;">…</span>
-      <a href="#" class="page-btn">10</a>
-      <a href="#" class="page-btn">›</a>
-    </div>
+    <div class="pagination" id="pagination"></div>
 
   </main>
 </div>
+
+<script>
+  const SUPABASE_URL  = 'https://uaofatcgdvpcysaviima.supabase.co';
+  const ANON_KEY      = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVhb2ZhdGNnZHZwY3lzYXZpaW1hIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3Njc5MzkxOCwiZXhwIjoyMDkyMzY5OTE4fQ.2OrLyCNhNBYgiIwlIEJGoAWi6QyAUugd16TEIdbCqWQ';
+  const PAGE_SIZE     = 12;
+
+  let allProducts = [];
+  let filtered    = [];
+  let currentPage = 1;
+  let sortKey     = 'sort_order';
+
+  // ── Active filters ──────────────────────────────────────────
+  const activeFilters = { brand: new Set(), type: new Set(), shade: new Set(), price: new Set() };
+
+  // ── Fetch all products once ──────────────────────────────────
+  async function fetchProducts() {
+    const res = await fetch(
+      `${SUPABASE_URL}/rest/v1/products?select=*&order=sort_order.asc`,
+      { headers: { 'apikey': ANON_KEY, 'Authorization': `Bearer ${ANON_KEY}` } }
+    );
+    allProducts = await res.json();
+    buildSidebar();
+    applyFilters();
+  }
+
+  // ── Build sidebar filter counts dynamically ──────────────────
+  function buildSidebar() {
+    const totalReviews = allProducts.reduce((s, p) => s + (p.review_count || 0), 0);
+    document.querySelector('.badge-num').textContent = totalReviews.toLocaleString();
+
+    renderFilterGroup('brand-list',  [...new Set(allProducts.map(p => p.brand))].sort(), 'brand');
+    renderFilterGroup('type-list',   [...new Set(allProducts.map(p => p.type))].sort(),  'type');
+    renderFilterGroup('shade-list',  [...new Set(allProducts.map(p => p.shade_label).filter(Boolean))].sort(), 'shade');
+  }
+
+  function renderFilterGroup(id, values, key) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.innerHTML = values.map(v => {
+      const count = allProducts.filter(p => (key === 'shade' ? p.shade_label : p[key]) === v).length;
+      return `<label class="filter-item">
+        <input type="checkbox" data-key="${key}" data-val="${v}" onchange="onFilter()" />
+        ${v} <span class="filter-count">(${count})</span>
+      </label>`;
+    }).join('');
+  }
+
+  // ── Filter + sort ────────────────────────────────────────────
+  function onFilter() {
+    ['brand','type','shade'].forEach(key => {
+      activeFilters[key].clear();
+      document.querySelectorAll(`input[data-key="${key}"]:checked`).forEach(cb => activeFilters[key].add(cb.dataset.val));
+    });
+    activeFilters.price.clear();
+    document.querySelectorAll('input[data-key="price"]:checked').forEach(cb => activeFilters.price.add(cb.dataset.val));
+    currentPage = 1;
+    applyFilters();
+  }
+
+  function applyFilters() {
+    filtered = allProducts.filter(p => {
+      if (activeFilters.brand.size && !activeFilters.brand.has(p.brand)) return false;
+      if (activeFilters.type.size  && !activeFilters.type.has(p.type))   return false;
+      if (activeFilters.shade.size && !activeFilters.shade.has(p.shade_label)) return false;
+      if (activeFilters.price.size) {
+        const inRange = [...activeFilters.price].some(r => {
+          if (r === 'under10')  return p.price < 10;
+          if (r === '10to20')   return p.price >= 10 && p.price <= 20;
+          if (r === '20to35')   return p.price > 20 && p.price <= 35;
+          if (r === 'over35')   return p.price > 35;
+        });
+        if (!inRange) return false;
+      }
+      return true;
+    });
+
+    // Sort
+    filtered.sort((a, b) => {
+      if (sortKey === 'price_asc')   return a.price - b.price;
+      if (sortKey === 'price_desc')  return b.price - a.price;
+      if (sortKey === 'newest')      return new Date(b.created_at) - new Date(a.created_at);
+      if (sortKey === 'top_rated')   return b.rating - a.rating || b.review_count - a.review_count;
+      return a.sort_order - b.sort_order;
+    });
+
+    document.querySelector('.page-count').textContent = `${filtered.length} product${filtered.length !== 1 ? 's' : ''}`;
+    renderPage();
+    renderPagination();
+  }
+
+  // ── Render product cards ─────────────────────────────────────
+  function stars(rating) {
+    const full = Math.round(rating);
+    return '★'.repeat(full) + '☆'.repeat(5 - full);
+  }
+
+  function badgeHTML(badge) {
+    if (!badge) return '';
+    const cls = badge === 'Best Seller' ? 'best' : badge === 'New' ? 'new' : '';
+    return `<span class="product-badge ${cls}">${badge}</span>`;
+  }
+
+  function cardHTML(p) {
+    const oldPrice = p.original_price ? `<span class="old">$${Number(p.original_price).toFixed(2)}</span>` : '';
+    const disabled = p.in_stock ? '' : 'disabled style="opacity:.5;cursor:not-allowed"';
+    const cartLabel = p.in_stock ? 'Add to Cart' : 'Out of Stock';
+    return `
+      <div class="product-card">
+        ${badgeHTML(p.badge)}
+        <div class="product-img-wrap">
+          <img src="${p.image_url}" alt="${p.name}" loading="lazy" />
+        </div>
+        <div class="product-info">
+          <div class="product-brand-row">
+            <span class="product-brand">${p.brand}</span>
+            <span class="product-type-tag">${p.type}</span>
+          </div>
+          <p class="product-name">${p.name}</p>
+          <div class="product-stars">${stars(p.rating)} <span class="review-num">(${p.review_count})</span></div>
+          <div class="product-price-row">
+            <div class="product-price">$${Number(p.price).toFixed(2)} ${oldPrice}</div>
+            <button class="btn-cart" ${disabled}>${cartLabel}</button>
+          </div>
+        </div>
+      </div>`;
+  }
+
+  function renderPage() {
+    const start = (currentPage - 1) * PAGE_SIZE;
+    const page  = filtered.slice(start, start + PAGE_SIZE);
+    const grid  = document.getElementById('product-grid');
+    grid.innerHTML = page.length
+      ? page.map(cardHTML).join('')
+      : '<div style="grid-column:1/-1;text-align:center;padding:48px;color:#aaa;">No products match your filters.</div>';
+  }
+
+  // ── Pagination ───────────────────────────────────────────────
+  function renderPagination() {
+    const total = Math.ceil(filtered.length / PAGE_SIZE);
+    const el = document.getElementById('pagination');
+    if (total <= 1) { el.innerHTML = ''; return; }
+
+    let html = `<a class="page-btn" onclick="goPage(${currentPage - 1})">‹</a>`;
+    for (let i = 1; i <= total; i++) {
+      if (i === 1 || i === total || Math.abs(i - currentPage) <= 1) {
+        html += `<a class="page-btn ${i === currentPage ? 'active' : ''}" onclick="goPage(${i})">${i}</a>`;
+      } else if (Math.abs(i - currentPage) === 2) {
+        html += `<span style="color:#ccc;font-size:14px;padding:0 4px">…</span>`;
+      }
+    }
+    html += `<a class="page-btn" onclick="goPage(${currentPage + 1})">›</a>`;
+    el.innerHTML = html;
+  }
+
+  function goPage(n) {
+    const total = Math.ceil(filtered.length / PAGE_SIZE);
+    if (n < 1 || n > total) return;
+    currentPage = n;
+    renderPage();
+    renderPagination();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // ── Sort select ──────────────────────────────────────────────
+  document.querySelector('.sort-select').addEventListener('change', e => {
+    const map = {
+      'Best Recommended': 'sort_order',
+      'Price: Low to High': 'price_asc',
+      'Price: High to Low': 'price_desc',
+      'Newest First': 'newest',
+      'Top Rated': 'top_rated',
+    };
+    sortKey = map[e.target.value] || 'sort_order';
+    currentPage = 1;
+    applyFilters();
+  });
+
+  fetchProducts();
+</script>
 
 <!-- Footer -->
 <footer>
