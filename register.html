@@ -8,23 +8,24 @@
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --blue: #5795d2;
-      --blue-dark: #3a6fad;
-      --blue-hover: #062fb2;
-      --text: #222222;
-      --text-body: #000000;
+      --blue: #0077F1;
+      --blue-dark: #005AC4;
+      --blue-hover: #005AC4;
+      --text: #1A1A1A;
+      --text-body: #1A1A1A;
       --border: #ededed;
-      --bg2: #f6f6f6;
-      --gold: #c8a84b;
+      --bg2: #F9F3FA;
+      --gold: #FEC107;
+      --primary: #081C2D;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: 'Barlow', system-ui, -apple-system, sans-serif;
+      font-family: 'Poppins', system-ui, -apple-system, sans-serif;
       font-size: 15px;
       color: var(--text-body);
       background: #fff;
@@ -33,7 +34,7 @@
 
     /* â”€â”€ Announcement Bar â”€â”€ */
     .announce-bar {
-      background: var(--blue);
+      background: var(--primary);
       color: #fff;
       text-align: center;
       padding: 9px 16px;
@@ -57,23 +58,15 @@
       height: 88px;
     }
     .logo {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 800;
-      font-size: 26px;
-      letter-spacing: -0.5px;
-      color: #1a1a1a;
       text-decoration: none;
       display: flex;
       align-items: center;
-      gap: 2px;
-      white-space: nowrap;
+      flex-shrink: 0;
     }
-    .logo-dot {
-      width: 10px; height: 10px;
-      background: var(--gold);
-      border-radius: 50%;
-      display: inline-block;
-      margin-bottom: 6px;
+    .logo-img {
+      height: 38px;
+      width: auto;
+      display: block;
     }
     .search-wrap {
       flex: 1;
@@ -89,7 +82,7 @@
       outline: none;
       padding: 0 16px;
       font-size: 14px;
-      font-family: 'Barlow', sans-serif;
+      font-family: 'Poppins', sans-serif;
       color: var(--text);
     }
     .search-wrap button {
@@ -154,7 +147,7 @@
       height: 44px;
     }
     .nav-item {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       font-size: 14px;
       font-weight: 600;
       letter-spacing: .08em;
@@ -176,15 +169,15 @@
     }
     .nav-cta {
       margin-left: auto;
-      background: var(--blue);
-      color: #fff !important;
+      background: var(--gold);
+      color: #1a1a1a !important;
       border-radius: 2px;
       padding: 0 18px !important;
       border-bottom: none !important;
       font-weight: 700;
       transition: background .2s !important;
     }
-    .nav-cta:hover { background: var(--blue-hover) !important; color: #fff !important; }
+    .nav-cta:hover { background: #e6ac00 !important; color: #1a1a1a !important; }
 
     /* â”€â”€ Register Page â”€â”€ */
     .register-section {
@@ -200,10 +193,10 @@
       max-width: 440px;
     }
     .register-title {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       font-size: 34px;
       font-weight: 800;
-      letter-spacing: .1em;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
       color: #1a1a1a;
       text-align: center;
@@ -231,7 +224,7 @@
       border-radius: 3px;
       padding: 13px 16px;
       font-size: 14px;
-      font-family: 'Barlow', sans-serif;
+      font-family: 'Poppins', sans-serif;
       color: var(--text);
       outline: none;
       transition: border-color .2s;
@@ -247,7 +240,7 @@
       border: none;
       border-radius: 3px;
       padding: 15px;
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       font-size: 15px;
       font-weight: 700;
       letter-spacing: .12em;
@@ -263,7 +256,7 @@
       display: block;
       text-align: center;
       margin: 18px 0 28px;
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       font-size: 13px;
       font-weight: 700;
       letter-spacing: .12em;
@@ -300,7 +293,7 @@
       border: none;
       border-radius: 3px;
       padding: 12px 16px;
-      font-family: 'Barlow', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 14px;
       font-weight: 600;
       color: #fff;
@@ -355,10 +348,11 @@
       margin-bottom: 40px;
     }
     .footer-logo {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       font-weight: 800;
-      font-size: 22px;
+      font-size: 20px;
       color: #fff;
+      letter-spacing: 0.18em;
       margin-bottom: 12px;
     }
     .footer-tagline { font-size: 13px; line-height: 1.7; color: #999; margin-bottom: 20px; }
@@ -375,7 +369,7 @@
     }
     .footer-socials a:hover { background: var(--blue); color: #fff; }
     .footer-col-title {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       font-size: 13px;
       font-weight: 700;
       letter-spacing: .12em;
